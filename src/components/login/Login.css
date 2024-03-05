@@ -1,0 +1,30 @@
+input{
+    display: block;
+    width: 70%;
+    margin: auto;
+    margin-top: 15px;
+    padding: 16px;
+    border-radius: 10px;
+    text-align: -webkit-match-parent;
+    border: 1px solid black;
+    background: #262626;
+    padding: 15px;
+    /* margin: 15px 0; */
+    font-size: 18px;
+    color: #fff;
+}
+
+button{
+    display: block;
+    /* background: #6f6f6f; */
+    margin: auto;
+    margin-top: 2.5vh;
+    padding: 1.4vh 5vh;
+    border-radius: 9px;
+    border: 1px solid black;
+    font-size: 15px;
+    font-weight: 700;
+    background: #ff004f;
+    color: white;
+    cursor: pointer;
+}
