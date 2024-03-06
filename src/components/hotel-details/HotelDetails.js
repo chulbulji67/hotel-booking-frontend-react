@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link , useParams} from 'react-router-dom';
+import RoomCard from '../room/room-card/RoomCard';
+import Rooms from '../room/romms/Rooms';
 
 
 export default function HotelDetails() {
@@ -14,7 +16,10 @@ export default function HotelDetails() {
         <li><Link to="/add-hotel">Add Hotel</Link></li>
         <li><Link to={`/admin/update/${id}`}>Update Hotel</Link></li>
         <li><Link to={`/admin/delete/${id}`} >Delete Hotel</Link></li>
+        <li><Link to={`/admin/add-room/${id}`} >Add room</Link></li>
       </ul>
+      <Rooms/>
+      {/* <RoomCard/> */}
     </div>
   )
 }

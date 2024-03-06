@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { deleteHotelById } from '../../services/hotelService';
 
+
 export default function HotelDelete() {
 
     const [response, setResponse] = useState();
@@ -20,6 +21,7 @@ export default function HotelDelete() {
         {`workding ${id}`}
         {response && `${response}`}
         <button type="button" onClick={deleteHotel}>Delete</button>
+      
     </div>
   )
 }

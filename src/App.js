@@ -11,6 +11,9 @@ import HotelForm from './components/add-hotel/HotelForm';
 import HotelDetails from './components/hotel-details/HotelDetails';
 import HotelUpdate from './components/update-hotel/HotelUpdate';
 import HotelDelete from './components/delete-hotel/HotelDelete';
+import AddRoomForm from './components/room/add-room/AddRoomForm';
+import DeleteRoom from './components/room/delete-room/DeleteRoom';
+import UpdateRoom from './components/room/update-room/UpdateRoom';
 
 function App() {
   const baseUrl = window.location.origin;
@@ -30,6 +33,9 @@ console.log(baseUrl);
       <Route path="/home/hotel-details/:id" element={<HotelDetails />} />
       <Route path="/admin/update/:id" element={<HotelUpdate />} />
       <Route path="/admin/delete/:id" element={<HotelDelete />} />
+      <Route path="/admin/add-room/:id" element={<AddRoomForm />} />
+      <Route path='/home/hotel-details/:id/room-details/:roomId' element={<DeleteRoom/>}/> 
+      <Route path='update/room/:id' element={<UpdateRoom/>}/>
     </Routes>
   </BrowserRouter>
   </div>
