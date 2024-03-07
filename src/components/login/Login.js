@@ -1,6 +1,6 @@
 import React ,{useState} from 'react'
 import { useNavigate } from 'react-router-dom'; // Import useNavigate instead of useHistory
-
+import { getUserByEmail } from '../../services/UserService';
 import "./Login.css"
 import { authService } from '../../services/authService';
 
@@ -11,6 +11,12 @@ export default function Login({setIsLoggedIn}) {
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
+    const getUserByUserName = async (email) =>{
+        const data = await getUserByEmail(email);
+        localStorage.setItem("userId", data.id);
+        console.log("get user by username method Working");
+    }
+
     const handleLogin = async (e) => {
         e.preventDefault();
 
@@ -20,6 +26,9 @@ export default function Login({setIsLoggedIn}) {
             if (data.jwtToken) {
                 // User authenticated, navigate to home page
                 setIsLoggedIn(true);
+                const email =  localStorage.getItem("username")
+                await getUserByUserName(email);
+                console.log("Local Storage user id",localStorage.getItem("userId"));
                 navigate('/home');
             } else {
                 // Invalid username or password, show error message and navigate to login page

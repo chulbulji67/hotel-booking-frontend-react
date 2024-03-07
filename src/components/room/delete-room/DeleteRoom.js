@@ -23,6 +23,7 @@ export default function DeleteRoom() {
     <div>
         {/* {`workding ${roomId}`} */}
         <Link to = {`/update/room/${roomId}`}>Update Room</Link>
+        <Link to = {`/hotel/${id}/book/room/${roomId}`}>Book Room</Link>
         {response && `${response}`}
         <button type="button" onClick={deleteRoom}>Delete Room</button>
       

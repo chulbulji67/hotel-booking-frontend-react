@@ -45,6 +45,7 @@ const logout = () => {
     localStorage.removeItem('Authorization');
     localStorage.removeItem('username');
     localStorage.removeItem('roles');
+    localStorage.removeItem("userId")
 };
 
 export const authService = {

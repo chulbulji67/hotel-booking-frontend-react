@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 export default function
     HotelCard({hotel}) {
-        console.log("Hotel=",hotel)
-        console.log("HotelName" , hotel.name);
+        // console.log("Hotel=",hotel)
+        // console.log("HotelName" , hotel.name);
     return (
 
 

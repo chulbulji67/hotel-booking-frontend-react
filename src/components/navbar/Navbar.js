@@ -9,6 +9,7 @@ export default function Navbar({isLoggedIn, setIsLoggedIn}) {
   
   const navigate = useNavigate();
   const role = localStorage.getItem('roles');
+  const userId = localStorage.getItem("userId");
 
   const handleLogout = () => {
     // Perform logout actions, such as clearing localStorage or sending logout request to server
@@ -39,6 +40,7 @@ export default function Navbar({isLoggedIn, setIsLoggedIn}) {
             {isLoggedIn ? (
               <>
                 <li><Link to="/home">Home</Link></li>
+                <li><Link to={`/user/${userId}/bookings`}>Your Bookings</Link></li>
                 {role === 'ROLE_ADMIN' && <li><Link to="/add-hotel">Add Hotel</Link></li>}
                 <li><Link to="/home" onClick={handleLogout}>Logout</Link></li>
               </>
