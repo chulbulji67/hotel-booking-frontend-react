@@ -54,6 +54,7 @@ export default function AddBookingComponent() {
                 <input type="datetime-local" name="checkOutDate" value={bookingData.checkOutDate} onChange={handleInputChange} />
                 <input type="number" name="totalCost" value={bookingData.totalCost} onChange={handleInputChange} />
                 <select name="bookingStatus" value={bookingData.bookingStatus} onChange={handleInputChange}>
+                    <option value="">Select Booking Status</option>
                     <option value="CONFIRMED">Confirmed</option>
                     <option value="CANCELLED">Cancelled</option>
                     <option value="COMPLETED">Completed</option>

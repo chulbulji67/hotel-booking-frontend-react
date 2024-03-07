@@ -6,6 +6,7 @@ export default function UserBooking() {
     const [bookings, setBookings] = useState([]);
     const {id} = useParams();
     const userId = localStorage.getItem("userId");
+    
     useEffect(() => {
         const fetchUserBookings = async () => {
             try {

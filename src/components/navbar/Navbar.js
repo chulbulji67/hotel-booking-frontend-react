@@ -9,7 +9,7 @@ export default function Navbar({isLoggedIn, setIsLoggedIn}) {
   
   const navigate = useNavigate();
   const role = localStorage.getItem('roles');
-  const userId = localStorage.getItem("userId");
+  const userId = localStorage.getItem("userId")
 
   const handleLogout = () => {
     // Perform logout actions, such as clearing localStorage or sending logout request to server

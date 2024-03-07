@@ -10,6 +10,7 @@ const getAuthToken = () => {
 // Service function to add a booking
 const addBooking = async (bookingData) => {
     try {
+        console.log(bookingData);
         const response = await axios.post(API_URL, bookingData, {
             headers: {
                 Authorization: getAuthToken(),

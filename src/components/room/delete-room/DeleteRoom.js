@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { deleteRoomById } from '../../../services/RoomService';
-
+import "./DeleteRoom.css"
 
 export default function DeleteRoom() {
 
     const [response, setResponse] = useState();
     const {id} = useParams();//for hotel
     const {roomId} = useParams();//for room
+    const role = localStorage.getItem('roles')
     
     const deleteRoom =async (e) =>{
         console.log("Delete button has clicked")
@@ -22,10 +23,10 @@ export default function DeleteRoom() {
   return (
     <div>
         {/* {`workding ${roomId}`} */}
-        <Link to = {`/update/room/${roomId}`}>Update Room</Link>
-        <Link to = {`/hotel/${id}/book/room/${roomId}`}>Book Room</Link>
+        {role==="ROLE_ADMIN" && <Link to = {`/update/room/${roomId}`} className='link'>Update Room</Link>}
+        <Link to = {`/hotel/${id}/book/room/${roomId}`} className='link'>Book Room</Link>
         {response && `${response}`}
-        <button type="button" onClick={deleteRoom}>Delete Room</button>
+        {role==="ROLE_ADMIN" && <button type="button" onClick={deleteRoom}>Delete Room</button>}
       
     </div>
   )

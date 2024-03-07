@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 export default function UpdateBookingComponent() {
     const [res, setRes] = useState();
     const {id} = useParams();
+    
     const [updatedBookingData, setUpdatedBookingData] = useState({
         checkInDate: '',
         checkOutDate: '',
@@ -14,7 +15,7 @@ export default function UpdateBookingComponent() {
         room: { id: '' },
         hotel: { id: id }
     });
-    const [bookingIdToUpdate, setBookingIdToUpdate] = useState('');
+
 
     const {bookingId} = useParams();
 

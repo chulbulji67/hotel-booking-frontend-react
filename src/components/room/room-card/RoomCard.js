@@ -14,9 +14,10 @@ export default function
             <div className='about-hotel'>
                 <img src="https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" />
                 <div className="hotel-card-content">
-                    <h3>{room.roomNumber}</h3>
-                    <p>{room.roomNumber}room.roomStatus</p>
+                    <h3>Room Number: {room.roomNumber}</h3>
                     <p>{room.roomType}</p>
+                    <p>{room.price}</p>
+                    <p>{room.roomStatus}</p>
                     <Link to={`room-details/${roomId}`} className='btn'>Know More</Link>
                 </div>
             </div>

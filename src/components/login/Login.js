@@ -4,7 +4,7 @@ import { getUserByEmail } from '../../services/UserService';
 import "./Login.css"
 import { authService } from '../../services/authService';
 
-export default function Login({setIsLoggedIn}) {
+export default function Login({isLoggedIn, setIsLoggedIn}) {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -14,7 +14,7 @@ export default function Login({setIsLoggedIn}) {
     const getUserByUserName = async (email) =>{
         const data = await getUserByEmail(email);
         localStorage.setItem("userId", data.id);
-        console.log("get user by username method Working");
+        console.log("get user by username method Working " ,localStorage.getItem("userId"));
     }
 
     const handleLogin = async (e) => {

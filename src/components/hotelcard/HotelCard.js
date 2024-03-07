@@ -2,8 +2,7 @@ import React from 'react'
 import "./HotelCard.css"
 import { Link } from 'react-router-dom';
 
-export default function
-    HotelCard({hotel}) {
+export default function HotelCard({hotel}) {
         // console.log("Hotel=",hotel)
         // console.log("HotelName" , hotel.name);
     return (
@@ -16,7 +15,8 @@ export default function
                     <h3>{hotel.name}</h3>
                     <p>{hotel.description}</p>
                     <p>{hotel.location}</p>
-                    <Link to={`hotel-details/${hotel.id}`} className='btn'>Know More</Link>
+                    {localStorage.getItem("roles") && <Link to={`hotel-details/${hotel.id}`} className='btn' style={{marginRight:"60px"}}>Know More</Link>}
+                    {localStorage.getItem("roles") && <Link to={`hotel-details/${hotel.id}/reviews`} className='btn'>See Reviews</Link>}
                 </div>
             </div>
             

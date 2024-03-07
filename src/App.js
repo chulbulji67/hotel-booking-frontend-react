@@ -17,6 +17,11 @@ import AddBookingComponent from './components/bookings/add-booking/AddBookingCom
 import UserBooking from './components/bookings/UserBooking';
 import UpdateBookingComponent from './components/bookings/update-booking/UpdateBookingComponet';
 import DeleteBooking from './components/bookings/delete-bookings/DeleteBooking';
+import Reviews from './components/review/get-all-review/Reviews';
+import AddReview from './components/review/add-review/AddReview';
+import DeleteReview from './components/review/delete-review/DeleteReview';
+import UpdateReview from './components/review/update-review/UpdateReview';
+
 
 function App() {
   const baseUrl = window.location.origin;
@@ -44,6 +49,10 @@ console.log(baseUrl);
       <Route path='/user/:id/bookings' element={<UserBooking/>}/>
       <Route path='/user/:userId/hotel/:id/bookings/:bookingId' element={<UpdateBookingComponent/>}/>
       <Route path='/user/:userId/hotel/:id/bookings/delete/:bookingId' element={<DeleteBooking/>}/>
+      <Route path='home/hotel-details/:id/reviews' element={<Reviews/>}/>
+      <Route path='/hotel/:id/add-review' element={<AddReview/>}/>
+      <Route path='/hotel/:id/delete-review/:reviewId' element={<DeleteReview/>}/>
+      <Route path='/hotel/:id/update-review/:reviewId' element={<UpdateReview/>}/>
       
     </Routes>
   </BrowserRouter>

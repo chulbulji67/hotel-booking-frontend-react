@@ -1,0 +1,8 @@
+.link{
+    color: white;
+  display: flex;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 20px 5px;
+  font-size: 18px;
+}
