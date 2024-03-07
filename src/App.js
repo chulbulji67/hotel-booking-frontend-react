@@ -16,6 +16,7 @@ import UpdateRoom from './components/room/update-room/UpdateRoom';
 import AddBookingComponent from './components/bookings/add-booking/AddBookingComponent';
 import UserBooking from './components/bookings/UserBooking';
 import UpdateBookingComponent from './components/bookings/update-booking/UpdateBookingComponet';
+import DeleteBooking from './components/bookings/delete-bookings/DeleteBooking';
 
 function App() {
   const baseUrl = window.location.origin;
@@ -42,6 +43,7 @@ console.log(baseUrl);
       <Route path='/hotel/:id/book/room/:roomId' element={<AddBookingComponent/>}/>
       <Route path='/user/:id/bookings' element={<UserBooking/>}/>
       <Route path='/user/:userId/hotel/:id/bookings/:bookingId' element={<UpdateBookingComponent/>}/>
+      <Route path='/user/:userId/hotel/:id/bookings/delete/:bookingId' element={<DeleteBooking/>}/>
       
     </Routes>
   </BrowserRouter>

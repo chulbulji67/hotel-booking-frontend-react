@@ -34,6 +34,7 @@ export default function UserBooking() {
                         <p>Room Number: {booking.roomNumber}</p>
                         <p>Hotel Name: {booking.hotelName}</p>
                         <Link to={`/user/${userId}/hotel/${id}/bookings/${booking.id}`} >Update Booking</Link>
+                        <Link to={`/user/${userId}/hotel/${id}/bookings/delete/${booking.id}`} >Delete Booking</Link>
                     </li>
                 ))}
             </ul>

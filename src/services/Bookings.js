@@ -36,6 +36,21 @@ const getAllBookings = async () => {
         throw error;
     }
 };
+
+const deleteBookingById = async (bookingId) => {
+    try {
+        const response = await axios.delete(API_URL+"/"+bookingId, {
+            headers: {
+                Authorization: getAuthToken(),
+            }
+        });
+        return response.data;
+    } catch (error) {
+        console.error('Failed to get all bookings:', error);
+        throw error;
+    }
+};
+
 const getAllBookingsByUser = async (userId) => {
     try {
         const response = await axios.get(API_URL+`/user/${userId}`, {
@@ -65,4 +80,4 @@ const updateBookingById = async (bookingId, updatedBookingData,) => {
     }
 };
 
-export { addBooking, getAllBookings, updateBookingById , getAllBookingsByUser};
+export { addBooking, getAllBookings, updateBookingById , getAllBookingsByUser, deleteBookingById};
