@@ -18,7 +18,7 @@ export default function
                     <p>{room.roomType}</p>
                     <p>{room.price}</p>
                     <p>{room.roomStatus}</p>
-                    <Link to={`room-details/${roomId}`} className='btn'>Know More</Link>
+                    <Link to={`room-details/${roomId}`} className='btn'>Book Room</Link>
                 </div>
             </div>
             
